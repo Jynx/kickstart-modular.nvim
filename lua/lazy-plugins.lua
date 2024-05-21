@@ -24,6 +24,8 @@ require('lazy').setup({
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
+  -- eslint plugin
+  -- { import = 'lazyvim.plugins.extras.linting.eslint' },
 
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
@@ -44,7 +46,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
+  require 'kickstart/plugins/catppuccin',
 
   require 'kickstart/plugins/todo-comments',
 

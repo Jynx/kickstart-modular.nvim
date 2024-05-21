@@ -58,7 +58,7 @@ return {
         --  All the info you're looking for is in `:help telescope.setup()', `
         --
         defaults = {
-          file_ignore_patterns = { '.idea', '.git/', '.cache', '%.o', '%.a', '%.out', '%.class', '%.pdf', '%.mp4', '%.zip' },
+          file_ignore_patterns = { '.idea', '.git/', '.cache' },
         },
         pickers = {
           find_files = { hidden = true },

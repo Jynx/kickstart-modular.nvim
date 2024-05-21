@@ -15,6 +15,12 @@ return {
       -- used for completion, annotations and signatures of Neovim apis
       -- TODO: add undefined globals to config
       { 'folke/neodev.nvim', opts = {} },
+
+      {
+        'pmizio/typescript-tools.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+        opts = {},
+      },
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -137,7 +143,7 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        gopls = {},
+        -- gopls = {},
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -145,7 +151,9 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
+        -- tsserver = {},
+        eslint = {},
+        -- eslint_d = {},
         -- gdtoolkit = {},
         --
         lua_ls = {
